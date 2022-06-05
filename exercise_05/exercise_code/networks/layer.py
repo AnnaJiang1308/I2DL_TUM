@@ -18,7 +18,8 @@ class Sigmoid:
         # TODO:                                                                #
         # Implement the forward pass of Sigmoid activation function            #
         ########################################################################
-
+        cache=x
+        out = 1/(1+np.exp(-x))
         pass
 
         ########################################################################
@@ -39,7 +40,9 @@ class Sigmoid:
         # TODO:                                                                #
         # Implement the backward pass of Sigmoid activation function           #
         ########################################################################
-
+        x=cache
+        y=1/(1+np.exp(-x))
+        dx=dout*y*(1-y)
         pass
 
         ########################################################################
@@ -65,7 +68,8 @@ class Relu:
         # TODO:                                                                #
         # Implement the forward pass of Relu activation function               #
         ########################################################################
-
+        cache=x
+        out=(x+np.absolute(x))/2
         pass
 
         ########################################################################
@@ -86,7 +90,9 @@ class Relu:
         # TODO:                                                                #
         # Implement the backward pass of Relu activation function              #
         ########################################################################
-
+        x=cache
+        out=(x+np.absolute(x))/2
+        dx=dout*out/x
         pass
 
         ########################################################################
@@ -115,7 +121,10 @@ def affine_forward(x, w, b):
     # TODO: Implement the affine forward pass. Store the result in out.    #
     # You will need to reshape the input into rows.                        #
     ########################################################################
-
+    D=np.prod(x.shape[1:])
+    x_r=x.reshape((N,D))
+    out=x_r.dot(w)+b
+    
     pass
 
     ########################################################################
@@ -143,7 +152,15 @@ def affine_backward(dout, cache):
     ########################################################################
     # TODO: Implement the affine backward pass.                            #
     ########################################################################
-
+    N= x.shape[0]
+    D=np.prod(x.shape[1:])
+    x_r=x.reshape((N,D))
+    
+    dx_r=np.dot(dout,w.T)#N*D
+    dw=np.dot(x_r.T,dout)#d*M
+    db=np.dot(dout.T,np.ones(N))
+    
+    dx=dx_r.reshape(x.shape)
 
     pass
 
