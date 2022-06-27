@@ -84,7 +84,7 @@ class NormalizeTransform:
         #   - substract the mean of dataset                                    #
         #   - divide by standard deviation                                     #
         ########################################################################
-
+        images = (images - self.mean) / self.std
         pass
 
         ########################################################################

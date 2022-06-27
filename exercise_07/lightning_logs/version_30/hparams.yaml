@@ -1,0 +1,9 @@
+batch_size: 250
+hidden_size: 512
+input_size: 3072
+learning_rate: 0.001
+loading_method: Image
+lr: 0.01
+lr_decay_rate: 0.25
+num_classes: 10
+num_workers: 2

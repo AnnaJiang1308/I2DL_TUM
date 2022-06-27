@@ -1,0 +1,48 @@
+activation: !!python/object:torch.nn.modules.activation.PReLU
+  _backward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _buffers: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _is_full_backward_hook: null
+  _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _modules: !!python/object/apply:collections.OrderedDict
+  - []
+  _non_persistent_buffers_set: !!set {}
+  _parameters: !!python/object/apply:collections.OrderedDict
+  - - - weight
+      - !!python/object/apply:torch._utils._rebuild_parameter
+        - !!python/object/apply:torch._utils._rebuild_tensor_v2
+          - !!python/object/apply:torch.storage._load_from_bytes
+            - !!binary |
+              gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
+              AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
+              aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
+              Z2UKcQFYDwAAADEwNTU1MzE0Nzk5NTY4MHECWAMAAABjcHVxA0sBTnRxBFEugAJdcQBYDwAAADEw
+              NTU1MzE0Nzk5NTY4MHEBYS4BAAAAAAAAAAAAgD4=
+          - 0
+          - !!python/tuple
+            - 1
+          - !!python/tuple
+            - 1
+          - false
+          - !!python/object/apply:collections.OrderedDict
+            - []
+        - true
+        - !!python/object/apply:collections.OrderedDict
+          - []
+  _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  num_parameters: 1
+  training: true
+batch_size: 250
+hidden_size: 512
+input_size: 3072
+learning_rate: 0.01
+loading_method: Image
+num_classes: 10
+num_workers: 2
